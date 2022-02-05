@@ -1,11 +1,11 @@
 from operator import itemgetter
 
-additionalCost = int(input("Please enter your additional cost: "))
-overheadCost = int(input("Please enter your overhead cost: "))
-storageCost = int(input("Please enter your storage cost: "))
-aboveAdditional = int(input("Above which value to require additional cost? "))
-availableMax = int(input("Please enter maxium 'items' available: "))
-toMakeMax = int(input("Please enter maxium 'items' can be made: "))
+additionalCost = int(input("[Additional worker cost] Please enter your additional cost: "))
+overheadCost = int(input("[Overhead costs] Please enter your overhead cost: "))
+storageCost = int(input("[Held in stock cost] Please enter your storage cost: "))
+aboveAdditional = int(input("[Value required additional worker] Above which value to require additional cost? "))
+availableMax = int(input("[Maxium in stock each month] Please enter maxium 'items' available: "))
+toMakeMax = int(input("[Maxium value can be made] Please enter maxium 'items' can be made: "))
 
 inStock = 0
 toMake = 0
@@ -21,7 +21,7 @@ requestOrder = []
 
 while True:
     try:
-        item = int(input("Enter number of item demanded (leave blank and enter to stop): "))
+        item = int(input("[Start from first month to last month] Enter number of item demanded (leave blank and enter to stop): "))
         requestOrder.append(item)
         count = count + 1
     except ValueError:
