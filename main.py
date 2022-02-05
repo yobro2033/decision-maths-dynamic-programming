@@ -74,7 +74,7 @@ for i in range(count):
                                         value = (inStock*storageCost) + overheadCost + additionalCost +valueD['value']
                                         valueData.append({'stage': varCount, 'state': inStock, 'action': toMake, 'destination': leftOver, 'value': value})
                 lastRun = True
-                
+
             else:
                 for valueD in valueData:
                     for j in range(availableMax + 1):
@@ -98,4 +98,10 @@ for i in range(count):
                                             value = (inStock*storageCost) + overheadCost + additionalCost +valueD['value']
                                             valueData.append({'stage': varCount, 'state': inStock, 'action': toMake, 'destination': leftOver, 'value': value})
 
-print(valueData)
+finalData = []
+
+for value in valueData:
+    if value['stage'] == count:
+        finalData.append(value)
+itemsFinal = sorted(finalData,key=lambda x: x['value'])
+print(itemsFinal[0])
