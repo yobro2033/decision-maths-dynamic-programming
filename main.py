@@ -1,3 +1,5 @@
+from operator import itemgetter
+
 additionalCost = int(input("Please enter your additional cost: "))
 overheadCost = int(input("Please enter your overhead cost: "))
 storageCost = int(input("Please enter your storage cost: "))
@@ -104,4 +106,30 @@ for value in valueData:
     if value['stage'] == count:
         finalData.append(value)
 itemsFinal = sorted(finalData,key=lambda x: x['value'])
-print(itemsFinal[0])
+print("\n")
+print("The minimise cost: £",itemsFinal[0]["value"])
+
+# ---------
+
+mylist = valueData
+
+mylist = sorted(mylist, key=itemgetter('stage', 'state', 'action', 'destination', 'value'))
+mylist = sorted(mylist, key=lambda k: (k['stage'], k['state'], k['action'], k['destination'], k['value']))
+
+seen = set()
+resultTable = []
+
+for dic in mylist:
+    key = (dic['stage'], dic['state'], dic['action'], dic['destination'])
+
+    if key in seen:
+        continue
+
+    resultTable.append(dic)
+    seen.add(key)
+
+print("\n")
+
+print("Stage\tState\tAction\tDestination\tValue")
+for i in resultTable:
+    print(" ",i['stage'],"\t ",i['state'],"\t ",i['action'],"\t    ",i['destination'],"\t       ",i['value'])
