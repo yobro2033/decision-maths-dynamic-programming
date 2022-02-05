@@ -1,4 +1,5 @@
 # Dynamic Programming - Decision Maths 2
+**Note: This program is not optimal, therefore, it required an additional comparing between value before calculate next step. This is the reason a full table will not be displayed, instead, only the final result will be displayed.**</br></br>
 **This problem broke down from exam style question of Edexcel. For all the questions with the same format and ensure that the condition given is that:**</br>
 **-There is no stock at the start and the end.**</br>
 # Question/ Problem
