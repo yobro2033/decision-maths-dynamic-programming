@@ -1,3 +1,6 @@
+# Dynamic Programming - Decision Maths 2
+**This problem broke down from exam style question of Edexcel. For all the questions with the same format and ensure that the condition given is that:**</br>
+**-There is no stock at the start and the end.**</br>
 # Question/ Problem
 **Below is an example of problem this program can deal with:**
 ![exam question](https://user-images.githubusercontent.com/80685605/152623955-d1ca8e4c-f0a8-483a-8843-96cc888d86cd.png)
