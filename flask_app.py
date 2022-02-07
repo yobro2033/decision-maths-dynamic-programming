@@ -11,12 +11,19 @@ def dash():
 @app.route('/search', methods=['POST', 'GET'])
 def home():
     additionalCost = request.form['additionalCost']
+    additionalCost = int(additionalCost)
     overheadCost = request.form['overheadCost']
+    overheadCost = int(overheadCost)
     storageCost = request.form['storageCost']
+    storageCost = int(storageCost)
     aboveAdditional = request.form['aboveAdditional']
+    aboveAdditional = int(aboveAdditional)
     availableMax = request.form['availableMax']
+    availableMax = int(availableMax)
     toMakeMax = request.form['toMakeMax']
+    toMakeMax = int(toMakeMax)
     input_string = request.form['input_string']
+    input_string = str(input_string)
 
     inStock = 0
     toMake = 0
