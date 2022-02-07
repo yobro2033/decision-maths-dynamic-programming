@@ -2,6 +2,8 @@
 **Note: This script is minimise the cost, a minor change in code can help it maximise the cost.**</br></br>**This script will able to give you a full working out table of each stage with each value. However, it is not optimal about selecting the optimal value for the next step, therefore, it cannot provide the trace back from the minimal cost of the last stage to first stage.**</br></br>
 **This problem broke down from exam style question of Edexcel - D2. For all the questions with the same format can use this script to retrieve the result. However, you need to ensure that the condition given is that:**</br>
 **- There is no stock at the start and the end.**</br>
+# Demo website
+[*Click here*](https://viet-dynamic-programming.herokuapp.com/)
 # Question/ Problem
 **Below is an example of problem this script can deal with:**
 ![exam question](https://user-images.githubusercontent.com/80685605/152661012-16d0af2f-0e1a-4daf-9bb6-ec2c2e5b45c7.png)
