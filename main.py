@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from operator import itemgetter
 
 additionalCost = int(input("[Additional worker cost] Please enter your additional cost: "))
@@ -16,16 +17,13 @@ tempRequired = 0
 varCount = 0
 
 valueData = []
-requestOrder = []
 
+input_string = raw_input("[Start from first month to last month] Enter number of item demanded (Each separated by space): ")
+requestOrder = input_string.split()
 
-while True:
-    try:
-        item = int(input("[Start from first month to last month] Enter number of item demanded (leave blank and enter to stop): "))
-        requestOrder.append(item)
-        count = count + 1
-    except ValueError:
-        break
+for count in range(0, len(requestOrder)):
+    requestOrder[count] = int(requestOrder[count])
+    count = count + 1
 
 firstRun = True
 
