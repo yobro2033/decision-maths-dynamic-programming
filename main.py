@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+from tabulate import tabulate
 from operator import itemgetter
 
 additionalCost = int(input("[Additional worker cost] Please enter your additional cost: "))
@@ -18,7 +18,7 @@ varCount = 0
 
 valueData = []
 
-input_string = raw_input("[Start from first month to last month] Enter number of item demanded (Each separated by space): ")
+input_string = input("[Start from first month to last month] Enter number of item demanded (Each separated by space): ")
 requestOrder = input_string.split()
 
 for count in range(0, len(requestOrder)):
@@ -104,6 +104,7 @@ for value in valueData:
     if value['stage'] == count:
         finalData.append(value)
 itemsFinal = sorted(finalData,key=lambda x: x['value'])
+
 print("\n")
 print("The minimise cost: £",itemsFinal[0]["value"])
 
@@ -128,6 +129,6 @@ for dic in mylist:
 
 print("\n")
 
-print("Stage\tState\tAction\tDestination\tValue")
-for i in resultTable:
-    print(" ",i['stage'],"\t ",i['state'],"\t ",i['action'],"\t    ",i['destination'],"\t       ",i['value'])
+header = resultTable[0].keys()
+rows =  [x.values() for x in resultTable]
+print(tabulate(rows, header, tablefmt='grid'))
