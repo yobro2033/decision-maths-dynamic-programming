@@ -114,7 +114,7 @@ def home():
             finalData.append(value)
     itemsFinal = sorted(finalData,key=lambda x: x['value'])
 
-    finalCost = itemsFinal[0]["value"])
+    finalCost = itemsFinal[0]["value"]
 
     # ---------
 
