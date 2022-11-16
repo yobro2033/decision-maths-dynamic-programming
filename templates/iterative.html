@@ -3,23 +3,28 @@
 <p><a href="https://viet-dynamic-programming.herokuapp.com/"><img src="/static/image/footer-logo.png" alt="logo" width=160 length=64 ></a></p>
 <div class="modal-content animate">
    <div class="container">
-    <script src="https://static.mul-pay.jp/ext/js/token.js"></script>
-    <script type="text/javascript">
-        Multipayment.init('9200002704338');
-        Multipayment.getToken(
-            {
-                cardno: '5355220955881176',
-                expire: '202707',
-                securitycode:'437',
-                holdername:'Viet Phan',
-                tokennumber: '1'
-            },
-      (response) => {
-          console.log("response = ", response);
-          console.log(response.tokenObject.token[0]);
-      }
-        );
-    </script>
+      <h2 style="text-align:center">Dynamic programming problem solver</h2>
+      <br>
+      <form action="/search" method="post">
+         <div style="text-align:center">
+           <label for="additionalCost">Please enter your additional cost: </label>
+           <input type="text" name="additionalCost" required><br>
+           <label for="overheadCost">Please enter your overhead cost: </label>
+           <input type="text" name="overheadCost" required><br>
+           <label for="storageCost">Please enter your storage cost: </label>
+           <input type="text" name="storageCost" required><br>
+           <label for="aboveAdditional">Above which value to require additional cost? </label>
+           <input type="text" name="aboveAdditional" required><br>
+           <label for="availableMax">Please enter maxium 'items' available: </label>
+           <input type="text" name="availableMax" required><br>
+           <label for="toMakeMax">Please enter maxium 'items' can be made: </label>
+           <input type="text" name="toMakeMax" required><br>
+           <label for="input_string">Please enter number of item demanded (Each separated by space): </label>
+           <input type="text" name="input_string" required><br>
+           <br>
+           <button type="submit" style="text-align:center">Enter</button>
+         </div>
+      </form>
    </div>
 </div>
 {% endblock %}
